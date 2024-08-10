@@ -88,6 +88,13 @@ def disStuInfo(schoolID, *firstName, **lastEmail):
     lastEmailKeys = lastEmail.keys()
     lastEmailValues = lastEmail.values()
     
+    """
+    Does not work properly yet. 
+    First iteration prints out matching the expected output,
+    but not the rest. 
+    I will of course continue to study Python in hopes of figuring out what
+    is going on.
+    """
     for i in firstNameFun:
         for x in lastEmailKeys:
             for y in lastEmailValues:
@@ -96,7 +103,7 @@ def disStuInfo(schoolID, *firstName, **lastEmail):
                 print(x)
                 print(y)
                 print("\n")
-            #print(x, y)
+            
     
 disStuInfo(10001,'John','Petter', Smith='jSmith@gmail.com',Potter="Petter@yahoo.com",Doe="j@gmail.com")
             
