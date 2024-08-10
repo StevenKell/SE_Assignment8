@@ -61,3 +61,42 @@ stripResults = txt.strip()
 print(stripResults)
 stripResults2 = txt.strip(" T,. ")
 print(stripResults2)
+
+#Function to test if a number is prime.
+
+def testIfPrime(testNumber):
+    if testNumber > 1: #Make sure number isn't equal to one, as one is prime.
+        for i in range(2, (testNumber//2)+1): 
+            if (testNumber % i) == 0: #Make sure the remainder of a number is not equal to zero.
+                print(testNumber, "is not a prime number")
+                break
+        else:
+            print(testNumber, "is a prime number")
+    else:
+        print(testNumber, "is not a prime number")
+
+
+testNumber = int(input("Enter a number to test if it is prime."))
+
+testIfPrime(testNumber)
+
+#Function which can take a variable number of arguments
+
+def disStuInfo(schoolID, *firstName, **lastEmail):
+    schoolIDFun = schoolID
+    firstNameFun = firstName
+    lastEmailKeys = lastEmail.keys()
+    lastEmailValues = lastEmail.values()
+    
+    for i in firstNameFun:
+        for x in lastEmailKeys:
+            for y in lastEmailValues:
+                print(schoolIDFun)
+                print(i)
+                print(x)
+                print(y)
+                print("\n")
+            #print(x, y)
+    
+disStuInfo(10001,'John','Petter', Smith='jSmith@gmail.com',Potter="Petter@yahoo.com",Doe="j@gmail.com")
+            
